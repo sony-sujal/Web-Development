@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+
+    <title>Day 4</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8e8e0, #e0f7fa);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            backdrop-filter: blur(8px);
+        }
+        h1 {
+            text-align: center;
+            color: #2b7de9;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #2b7de9;
+            outline: none;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        input[type="submit"] {
+            background-color: #2b7de9;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+        }
+        input[type="submit"]:hover {
+            background-color: #1f5fb5;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <h1>Personal Information Form</h1>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1234567890" required>
+
+        <label>Preferred Contact Method:</label>
+        <input type="radio" id="contact_email" name="contact_method" value="email" required checked>
+        <label for="contact_email" style="display:inline; font-weight:normal;">Email</label>
+        <input type="radio" id="contact_phone" name="contact_method" value="phone">
+        <label for="contact_phone" style="display:inline; font-weight:normal;">Phone</label>
+
+        <label>Subscribe to:</label>
+        <input type="checkbox" id="newsletter" name="subscribe" value="newsletter">
+        <label for="newsletter" style="display:inline; font-weight:normal;">Newsletter</label>
+        <input type="checkbox" id="updates" name="subscribe" value="updates">
+        <label for="updates" style="display:inline; font-weight:normal;">Product Updates</label>
+
+        <label for="interest">Areas of Interest:</label>
+        <select id="interest" name="interest" required>
+            <option value="">--Please choose an option--</option>
+            <option value="web_dev">Web Development</option>
+            <option value="design">Design</option>
+            <option value="marketing">Marketing</option>
+            <option value="data">Data Science</option>
+        </select>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Anything else you'd like us to know..."></textarea>
+
+        <input type="submit" value="Submit Information">
+    </form>
+
+</body>
+</html>
